@@ -1,0 +1,99 @@
+h1 {
+  text-align: center;
+}
+
+body {
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,60px);
+    gap:5px;
+    text-align:center;
+}
+
+input{
+    width:60px;
+    height:60px;
+    font-size: 24px;
+    text-align: center;
+    border-radius:5px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.alphabet {
+    text-align: center;
+    border-radius : 5px;
+}
+
+.alphabet button{
+    width:50px;
+    height: 40px
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.success {
+    border: 3px solid green;
+    color: green;
+}
+
+.modal.failure {
+    border: 3px solid red;
+    color: red;
+}
+
+.restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: #2980b9;
+}
+
+/*Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
